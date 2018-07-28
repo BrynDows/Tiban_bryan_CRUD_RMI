@@ -1,0 +1,42 @@
+
+-----------------
+Servidor RMI: El programa lo comoponen dos partes, servidor y cliente.
+Servidor proveerá de operaciones CRUD (Create, Read, Update, Delete) a un cliente,
+Cliente solicitará operaciones y servidor las ejecutará devolviendo un resultado.
+-----------------
+Se hace uso de una base datos llamada "tiban_bryan_CRUD.db" alojada en SQLite(SE CREA EN LA RAIZ DEL PROYECTO),
+esta base de datos contiene una única tabla llamada nombres con la siguiente estrucura:
+	_id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT
+	nombre VARCAHR(30)
+	apellido VARCHAR(30)
+
+El proyecto consta de 4 paquetes con un total de 9 clases.
+Todas y cada una de ellas contienen comentarios a modo de
+JavaDoc.
+
+El proyecto consta de los siguientes paquetes: 
+
+1.Paquete connection: Contiene la clase que permite realizar una
+conexión hacia la base de datos.
+
+2.Paquete modelo: contiene la lógica del Cliente y del Servidor 
+así como tambien los "Lanzadores" de cada uno de ellos, es decir, aquella clase "main" 
+que nos permitirá iniciarlos.
+
+3.Paquete rmi: contiene la lógica del servidor RMI: interfaz y clase
+que implementa la interfaz.
+
+4.vista: contiene la interaz de usuario.
+
+-----------------
+Para el correcto funcionamiento de este proyecto es necesario
+tener implementado el driver de SQLITE, pues la BD
+se aloja en este gestor de base de datos.
+
+* El driver Sqlite se encuentra en la raíz del proyecto y su nombre es:
+	sqlite-jdbc-3.20.0.jar
+
+También es importante ejecutar el servidor(Clase MAINServer.java) antes 
+que el cliente (Clase MAINClient.java) DESDE EL PROPIO PROYECTO y no desde cmd.
+
+
